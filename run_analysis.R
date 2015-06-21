@@ -1,9 +1,6 @@
-dir <- "E:/Users/Kasia/Documents/R/Coursera/Getting And Cleaning Data/UCI HAR Dataset"
-setwd(dir)
 dir <- getwd()
 
 # 1. Merges the training and the test sets to create one data set.
-
 # load training set
 setwd("train")
 subject_train <- read.table(file="subject_train.txt")
@@ -25,7 +22,6 @@ rm(X_train, X_test, Y_train, Y_test)
 
 setwd(dir)
 features <- read.table(file="features.txt")
-
 
 # 2. Extracts only the measurements on the mean and standard deviation for each measurement. 
 means <- grep("mean", features$V2)
@@ -53,5 +49,6 @@ X_tidy <- rbind(X_tidy, colMeans(X_tidy[,1:(c-1)]))
 rownames(X_tidy)[r+1] <- "Variab_Avg"
 X_tidy$Subj_Avg <- rowMeans(X_tidy[,1:(c-1)])
 
+# 6. Saves the tidy data set
 write.table(X_tidy, file="tidy_data_set.txt", row.name=FALSE, quote=FALSE, sep="\t")
 
