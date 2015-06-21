@@ -1,0 +1,30 @@
+## The codebook describing all the variables in run_analysis.R
+
+dir - stores the working directory
+
+# variables for training data
+subject_train - variable for the data read from file "subject_train.txt"
+X_train - variable for the data read from file "X_train.txt"
+Y_train - variable for the data read from file "y_train.txt" (activities numbers)
+
+# variables for test data
+subject_test - variable for the data read from file "subject_test.txt"
+X_test - variable for the data read from file "X_test.txt"
+Y_test - variable for the data read from file "y_test.txt" (activities numbers)
+
+# variables for merged data
+X - merged X_train and X_test data
+Y - merged Y_train and Y_test activity data
+
+features - variable for the data read from file "features.txt" (measurement labels)
+
+means - indexes of the mean data for each measurement
+stdevs - indexes of the standard deviation data for each measurement
+index - merged and sorted means and stdevs
+X - extracted means and standard deviations data
+
+activity_labels - variable for the data read from file "activity_labels.txt" (activity labels)
+Y_activity_labels - activity labels compatibile with Y variable
+
+# output
+X_tidy - the output, tidy data set with the average of each variable for each activity and each subject
