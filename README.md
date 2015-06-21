@@ -2,7 +2,7 @@
 Repo for Course Project on Coursera
 
 The repo contains run_analysis.R file for creating tidy data set from the data 
-available on https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+available on https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip .
 The data should be first extracted and the folder "UCI HAR Dataset" should be put in the same directory as the
 run_analysis.R file.
 
